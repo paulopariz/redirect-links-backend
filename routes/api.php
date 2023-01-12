@@ -15,12 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
 
 Route::get('/lista', [listController::class, 'listagem']);
-Route::get('/adicionar', [listController::class, 'adicionar']);
+Route::post('/adicionar', [listController::class, 'adicionar']);
 Route::get('/editar/{link}', [listController::class, 'editar']);
-Route::get('/atualizar/{link}', [listController::class, 'atualizar']);
-Route::get('/deletar/{link}', [listController::class, 'deletar']);
+Route::put('/atualizar/{link}', [listController::class, 'atualizar']);
+Route::delete('/deletar/{link}', [listController::class, 'deletar']);
