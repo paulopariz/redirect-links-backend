@@ -15,8 +15,8 @@ class CreateListLinksTable extends Migration
     {
         Schema::create('list_links', function (Blueprint $table) {
             $table->id();
-            $table->string("nome");
-            $table->string("email");
+            $table->string('nome');
+            $table->string('email');
             $table->timestamps();
         });
     }

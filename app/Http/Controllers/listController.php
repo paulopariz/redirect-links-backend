@@ -17,7 +17,7 @@ class listController extends Controller
     public function adicionar(Request $request)
     {
         $newLink = new ListLink();
-        $newLink->name = $request->name;
+        $newLink->nome = $request->name;
         $newLink->email = $request->email;
         $newLink->save();
 
@@ -31,7 +31,7 @@ class listController extends Controller
 
     public function atualizar(ListLink $link, Request $request)
     {
-        $link->name = $request->name;
+        $link->nome = $request->name;
         $link->email = $request->email;
         $link->save();
 
@@ -42,7 +42,7 @@ class listController extends Controller
     {
         $link->delete();
 
-        return response()->json($link);
+        return response()->json('success');
     }
 
 
