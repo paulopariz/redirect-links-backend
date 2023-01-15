@@ -18,7 +18,11 @@ class listController extends Controller
     {
         $newLink = new ListLink();
         $newLink->nome = $request->name;
-        $newLink->email = $request->email;
+        $newLink->linkone = $request->linkone;
+        $newLink->linktwo = $request->linktwo;
+        $newLink->linkthree = $request->linkthree;
+        $newLink->linktdefault = $request->linktdefault;
+        $newLink->maxclick = $request->maxclick;
         $newLink->save();
 
         return response()->json('success');
@@ -32,7 +36,11 @@ class listController extends Controller
     public function atualizar(ListLink $link, Request $request)
     {
         $link->nome = $request->name;
-        $link->email = $request->email;
+        $link->linkone = $request->linkone;
+        $link->linktwo = $request->linktwo;
+        $link->linkthree = $request->linkthree;
+        $link->linktdefault = $request->linktdefault;
+        $link->maxclick = $request->maxclick;
         $link->save();
 
         return response()->json('success');
