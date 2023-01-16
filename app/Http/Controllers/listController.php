@@ -22,7 +22,10 @@ class listController extends Controller
         $newLink->linktwo = $request->linktwo;
         $newLink->linkthree = $request->linkthree;
         $newLink->linktdefault = $request->linktdefault;
-        $newLink->maxclick = $request->maxclick;
+        $newLink->maxclickOne = $request->maxclickOne;
+        $newLink->maxclickTwo = $request->maxclickTwo;
+        $newLink->maxclickThree = $request->maxclickThree;
+
         $newLink->save();
 
         return response()->json('success');
@@ -40,7 +43,10 @@ class listController extends Controller
         $link->linktwo = $request->linktwo;
         $link->linkthree = $request->linkthree;
         $link->linktdefault = $request->linktdefault;
-        $link->maxclick = $request->maxclick;
+        $link->maxclickOne = $request->maxclickOne;
+        $link->maxclickTwo = $request->maxclickTwo;
+        $link->maxclickThree = $request->maxclickThree;
+
         $link->save();
 
         return response()->json('success');

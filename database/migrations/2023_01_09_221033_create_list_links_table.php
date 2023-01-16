@@ -20,7 +20,10 @@ class CreateListLinksTable extends Migration
             $table->string('linktwo');
             $table->string('linkthree');
             $table->string('linktdefault');
-            $table->string('maxclick');
+            $table->string('maxclickOne');
+            $table->string('maxclickTwo');
+            $table->string('maxclickThree');
+
             $table->timestamps();
         });
     }
